@@ -1,0 +1,6 @@
+framework module SendBirdVideoChat {
+  umbrella header "SendBirdVideoChat.h"
+
+  export *
+  module * { export * }
+}
