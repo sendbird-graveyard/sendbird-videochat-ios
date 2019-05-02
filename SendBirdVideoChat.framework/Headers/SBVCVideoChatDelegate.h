@@ -57,7 +57,7 @@ NS_ASSUME_NONNULL_BEGIN
 
  @param message The message object. It can be used for rendering in a view.
  */
-- (void)didSendEndCall:(nonnull SBVCCall *)call message:(nonnull SBDUserMessage *)message;
+- (void)didSendEndCall:(nonnull SBVCCall *)call message:(nullable SBDUserMessage *)message;
 
 /**
  A callback when the current user received an end call from the caller or the server. If you need to render the view for ending call, then use the message object in [`channel:didReceiveMessage:`](https://docs.sendbird.com/ref/ios/Protocols/SBDChannelDelegate.html#//api/name/channel:didReceiveMessage:) of [`SBDChannelDelegate`](https://docs.sendbird.com/ref/ios/Protocols/SBDChannelDelegate.html)
@@ -67,11 +67,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)didReceiveEndCall:(nonnull SBVCCall *)call;
 
 /**
- A callback when the connection for the video chat is established.
+ A callback when the connection for the video chat is opened.
 
  @param call The call object.
  */
-- (void)didConnectCall:(nonnull SBVCCall *)call;
+- (void)didOpenCall:(nonnull SBVCCall *)call;
 
 /**
  A callback when the opponent changes the audio state.
@@ -86,6 +86,20 @@ NS_ASSUME_NONNULL_BEGIN
  @param call The call object. The caller or the callee in the call object has the new value for the video state. The current user's role has to be checked.
  */
 - (void)didOpponentVideoStateChange:(nonnull SBVCCall *)call;
+
+/**
+ A callback when the connection is dropped. It doesn't mean the end call.
+
+ @param call The call object.
+ */
+- (void)didDropCall:(nonnull SBVCCall *)call;
+
+/**
+ A callback the connection is reopened.
+
+ @param call The call object.
+ */
+- (void)didReopenCall:(nonnull SBVCCall *)call;
 
 @end
 

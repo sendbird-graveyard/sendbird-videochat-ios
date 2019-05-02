@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-
 #import <SendBirdSDK/SendBirdSDK.h>
 #import <WebRTC/WebRTC.h>
 
@@ -64,22 +63,6 @@ NS_ASSUME_NONNULL_BEGIN
 + (BOOL)handleNotification:(nonnull NSDictionary *)notificationPayload;
 
 /**
- Determines whether the push notification is the start call or not.
-
- @param notificationPayload Push notification payload.
- @return If the payload is the start call, then returns YES.
- */
-+ (BOOL)isStartCallNotification:(nonnull NSDictionary *)notificationPayload;
-
-/**
- Determines whether the push notification is the end call or not.
- 
- @param notificationPayload Push notification payload.
- @return If the payload is the end call, then returns YES.
- */
-+ (BOOL)isEndCallNotification:(nonnull NSDictionary *)notificationPayload;
-
-/**
  Gets a call instance with a call ID.
 
  @param callId Call identifier.
@@ -107,7 +90,8 @@ NS_ASSUME_NONNULL_BEGIN
  @param delegate The instance that implements `SBVCVideoChatDelegate`.
  @param identifier The unique string.
  */
-+ (void)addVideoChatDelegate:(id<SBVCVideoChatDelegate>)delegate identifier:(nonnull NSString *)identifier;
++ (void)addVideoChatDelegate:(id<SBVCVideoChatDelegate> _Nullable)delegate
+                  identifier:(nonnull NSString *)identifier;
 
 /**
  Removes `SBVCVideoChatDelegate` with an identifier.

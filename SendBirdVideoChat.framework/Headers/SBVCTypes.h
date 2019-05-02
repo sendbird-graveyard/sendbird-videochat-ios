@@ -48,6 +48,7 @@ typedef NS_ENUM(NSUInteger, SBVCErrorCode) {
     SBVCErrorInvalidParameter =                 820400,
     SBVCErrorUnsuitableChannel =                820401,
     SBVCErrorAlreadyCameraSwitching =           820510,
+    SBVCErrorNotSupportedPlatform =             820620,
     SBVCErrorAlreadyCallGoingOn =               900600,
 };
 

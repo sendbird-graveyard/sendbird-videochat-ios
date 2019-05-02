@@ -208,7 +208,7 @@ Like the SendBird SDKs, the `SBVCVideoChatDelegate` has its own event delegate. 
 
 }
 
-- (void)didConnectCall:(SBVCCall *)call {
+- (void)didOpenCall:(SBVCCall *)call {
 
 }
 
@@ -314,7 +314,7 @@ If your app runs on iOS 9 or lower, you have to use a local notification to info
 
 - (void)pushRegistry:(PKPushRegistry *)registry didUpdatePushCredentials:(PKPushCredentials *)pushCredentials 
              forType:(PKPushType)type {
-  [SBDMain registerDevicePushKitToken:pushCredentials.token unique:YES completionHandler:^(SBDPushTokenRegistrationStatus status, SBDError * _Nullable error) {
+  [SBDMain registerDevicePushKitToken:pushCredentials.token unique:NO completionHandler:^(SBDPushTokenRegistrationStatus status, SBDError * _Nullable error) {
     // ...
   }];
 }
@@ -406,7 +406,7 @@ The following are provided with the `SBVCVideoChatDelegate`:
 6. **didReceiveEndCall:**
 - Called when a call has been closed from the opponent's request. (At the application which receives the close request)    
 - **call**: a `SBVCCall` instance which contains the current call status.  
-7. **didConnectCall:**
+7. **didOpenCall:**
 - Called when caller and callee are connected via SendBird server and can communicate with each other. (at both applications)   
 - **call**: a `SBVCCall` instance which contains the current call status.  
 8. **didOpponentAudioStateChange:**
@@ -490,7 +490,7 @@ Through a `SBVCCall` instance, you can make actions of a video or audio call. It
   }
 }
 
-- (void)didConnectCall:(SBVCCall *)call {
+- (void)didOpenCall:(SBVCCall *)call {
   // End call
   [call endWithCompletionHandler:^(SBDError * _Nullable error) {
 

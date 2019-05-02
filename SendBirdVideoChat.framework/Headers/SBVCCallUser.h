@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  This class represents a caller and a callee.
  */
-@interface SBVCCallUser : NSObject
+@interface SBVCCallUser : NSObject<NSCopying>
 
 /**
  The user ID of the call user.

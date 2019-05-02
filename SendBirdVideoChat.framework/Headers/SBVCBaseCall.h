@@ -38,12 +38,12 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  The caller's object. It can be used for showing the caller's name on the screen of the callee.
  */
-@property (strong, nonnull, nonatomic, readonly) SBVCCallUser *caller;
+@property (strong, nullable, nonatomic, readonly) SBVCCallUser *caller;
 
 /**
  The callee's object. It can be used for showing the callee's name on the screen of the caller.
  */
-@property (strong, nonnull, nonatomic, readonly) SBVCCallUser *callee;
+@property (strong, nullable, nonatomic, readonly) SBVCCallUser *callee;
 
 /**
  The ender who ends the call.

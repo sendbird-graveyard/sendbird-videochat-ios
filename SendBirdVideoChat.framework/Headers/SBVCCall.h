@@ -24,11 +24,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface SBVCCall : SBVCBaseCall
 
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wnullability"
-- (nonnull instancetype)init;
-#pragma clang diagnostic pop
-
 /**
  Accepts a call. It has to be called with the call object that the `didReceiveStartCall:` delegate method of `SBVCVideoChatDelegate` returns.
  The completion handler returns error only. If you need a call object, then implement `didSendAcceptFromCall:` delegate method of `SBVCVideoChatDelegate`.
@@ -47,18 +42,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)endWithCompletionHandler:(nullable void (^)(SBDError * _Nullable error))completionHandler;
 
 /**
- Sets the local video view. The client has to set the local video view as soon as the start call is completed and the view is ready.
-
- @param localVideoView The local video view object.
+ Tells that the local video view and the remote video view are ready.
  */
-- (void)setLocalVideoView:(nonnull SBVCLocalVideoView *)localVideoView;
-
-/**
- Sets the remote video view. The client has to set the remote video view as soon as the start call is completed and the view is ready.
-
- @param remoteVideoView The remote video view object.
- */
-- (void)setRemoteVideoView:(nonnull SBVCRemoteVideoView *)remoteVideoView;
+- (void)viewIsReady;
 
 #pragma mark - Device control
 

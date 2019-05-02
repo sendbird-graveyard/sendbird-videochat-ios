@@ -6,8 +6,8 @@
 //  Copyright © 2019 SendBird. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import <SendBirdSDK/SendBirdSDK.h>
+#import <UIKit/UIKit.h>
 #import <WebRTC/WebRTC.h>
 
 //! Project version number for SendBirdVideoChat.
@@ -21,8 +21,11 @@ FOUNDATION_EXPORT const unsigned char SendBirdVideoChatVersionString[];
 #import "SBVCBaseCall.h"
 #import "SBVCCall.h"
 #import "SBVCCallOptions.h"
+#import "SBVCCallUser.h"
 #import "SBVCDeviceUtils.h"
 #import "SBVCLocalVideoView.h"
 #import "SBVCMain.h"
 #import "SBVCRemoteVideoView.h"
+#import "SBVCTypes.h"
 #import "SBVCVideoChatDelegate.h"
+#import "SBVCVideoViewDelegate.h"
