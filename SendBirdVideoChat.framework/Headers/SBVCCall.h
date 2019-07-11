@@ -46,6 +46,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)viewIsReady;
 
+- (nullable SBVCCallOptions *)getOptions;
+
 #pragma mark - Device control
 
 /**

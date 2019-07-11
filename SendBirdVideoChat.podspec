@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SendBirdVideoChat"
-  s.version      = "0.9.1"
+  s.version      = "0.9.2"
   s.summary      = "SendBird VideoChat Framework"
   s.description  = "SendBird VideoChat provides the video/audio call."
   s.homepage     = "https://sendbird.com"
