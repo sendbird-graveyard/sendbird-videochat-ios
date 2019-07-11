@@ -1,9 +1,9 @@
 # SendBird VideoChat for iOS
 
-[![Platform](https://img.shields.io/badge/platform-iOS-orange.svg)](https://github.com/smilefam/sendbird-videochat-ios)
-[![Languages](https://img.shields.io/badge/Language-Objective--C-orange.svg)](https://github.com/smilefam/sendbird-videochat-ios)
+[![Platform](https://img.shields.io/badge/platform-iOS-orange.svg)](https://github.com/sendbird/sendbird-videochat-ios)
+[![Languages](https://img.shields.io/badge/Language-Objective--C-orange.svg)](https://github.com/sendbird/sendbird-videochat-ios)
 ![CocoaPods](https://img.shields.io/badge/CocoaPods-compatible-red.svg)
-[![Commercial License](https://img.shields.io/badge/license-Commercial-brightgreen.svg)](https://github.com/smilefam/sendbird-videochat-ios/blob/master/LICENSE.md)
+[![Commercial License](https://img.shields.io/badge/license-Commercial-brightgreen.svg)](https://github.com/sendbird/sendbird-videochat-ios/blob/master/LICENSE.md)
 
 SendBird `VideoChat` is an add-on to your application that enables users to make video and audio calls. SendBird `VideoChat` is available through [WebRTC](https://webrtc.org/). 
 
@@ -32,8 +32,8 @@ Note: This is a beta version and is not yet open to all users. If you would like
     - [`SBVCCall`](#sbvccall)
     - [`SBVCCallUser`](#sbvccalluser)
     - [`SBVCErrorCode`](#sbvcerrorcode)
-- [Change Log](https://github.com/smilefam/sendbird-videochat-ios/blob/master/CHANGELOG.md)
-- [License](https://github.com/smilefam/sendbird-videochat-ios/blob/master/LICENSE.md)
+- [Change Log](https://github.com/sendbird/sendbird-videochat-ios/blob/master/CHANGELOG.md)
+- [License](https://github.com/sendbird/sendbird-videochat-ios/blob/master/LICENSE.md)
 
 ## How to set and initialize `VideoChat`
 
@@ -42,9 +42,9 @@ The following shows how to install SendBird `VideoChat` framework via `CocoaPods
 ### Prerequisites
 
 * iOS 9.0 or higher
-* [SendBirdSDK framework](https://github.com/smilefam/sendbird-ios-framework) v3.0.133 or higher
+* [SendBirdSDK framework](https://github.com/sendbird/sendbird-ios-framework) v3.0.133 or higher
 * [Git Large File Storage](https://git-lfs.github.com/)
-* [WebRTC framework](https://github.com/smilefam/sendbird-webrtc-ios)
+* [WebRTC framework](https://github.com/sendbird/sendbird-webrtc-ios)
 * [CocoaPods](https://cocoapods.org/) or [Carthage](https://github.com/Carthage/Carthage)
 * Real devices. **The iOS simulator is not supported.**
 
@@ -54,7 +54,7 @@ Add the lines below to your `Podfile` file at the target of your project directo
 
 ```
 pod 'SendBirdSDK'
-pod 'SendBirdWebRTC', :git => 'https://github.com/smilefam/SendBird-WebRTC-iOS.git', :tag => 'v1.0'
+pod 'SendBirdWebRTC', :git => 'https://github.com/sendbird/SendBird-WebRTC-iOS.git', :tag => 'v1.0'
 pod 'SendBirdVideoChat'
 ```
 
@@ -71,9 +71,9 @@ Now you can see installed SendBirdVideoChat framework by inspecting `YOUR_PROJEC
 Add the lines below to your `Cartfile`
 
 ```
-github "smilefam/sendbird-webrtc-ios.git"
-github "smilefam/sendbird-ios-framework"
-github "smilefam/sendbird-videochat-ios"
+github "sendbird/sendbird-webrtc-ios.git"
+github "sendbird/sendbird-ios-framework"
+github "sendbird/sendbird-videochat-ios"
 ```
 
 Install the frameworks through Carthage.
