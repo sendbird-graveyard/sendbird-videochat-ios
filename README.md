@@ -1,3 +1,5 @@
+**We officially have lauched Sendbird Calls! Please visit the [new SDK](https://github.com/sendbird/sendbird-calls-ios).**  </br></br>
+
 # SendBird VideoChat for iOS
 
 [![Platform](https://img.shields.io/badge/platform-iOS-orange.svg)](https://github.com/sendbird/sendbird-videochat-ios)
